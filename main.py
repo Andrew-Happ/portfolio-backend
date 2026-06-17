@@ -6,7 +6,10 @@ app = FastAPI(title="Andrew Happ Portfolio API")
 # Ensure CORS is configured so your frontend port (e.g. 5173 template) can fetch it
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://portfolio-frontend-one-umber.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
